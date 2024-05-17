@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stddef.h": "c",
+			"count.h": "c",
+			"stdint.h": "c",
+			"stdint-gcc.h": "c",
+			"stdlib.h": "c",
+			"string.h": "c",
+			"leetcode.h": "c",
+			"limits": "c",
+			"stdbool.h": "c",
+			"ltypes.h": "c",
+			"unity.h": "c",
+			"unity_internals.h": "c",
+			"time.h": "c",
+			"list.h": "c",
+			"cmath": "c",
+			"big_data.h": "c",
+			"tree.h": "c"
+		},
+		"c-cpp-flylint.includePaths": [
+			"C:\\Ruby27-x64\\lib\\ruby\\gems\\2.7.0\\gems\\ceedling-0.31.1\\vendor\\unity\\src",
+			"C:\\msys64\\mingw64\\x86_64-w64-mingw32\\include",
+			"${workspaceFolder}\\src",
+			"${workspaceFolder}\\lib\\Service",
+			"${workspaceFolder}\\lib\\include"
+		]
+	}
+}

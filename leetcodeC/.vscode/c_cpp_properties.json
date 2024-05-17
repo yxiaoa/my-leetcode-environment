@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+		"C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/ceedling-0.31.1/vendor/unity/src",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/lib/Service",
+                "${workspaceFolder}/lib/inc"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
