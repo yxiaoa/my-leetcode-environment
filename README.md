@@ -15,9 +15,18 @@ Vscode
 
 ## Environment Setup
 
+### C
+
+#### Run
+
+1. Install Ceedling
+2. Run in terminal
+   - ceedling
+
 ### Ruby
 
 #### Run
+
 1. Install ruby, and use ruby -v to check
 2. Install vscode extension Ruby LSP
 3. Install dependency
