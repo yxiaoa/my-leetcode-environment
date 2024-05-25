@@ -3,7 +3,7 @@ require 'set'
 # @param {String} s
 # @return {String}
 def make_smallest_palindrome(s)
-	chars = s.split("")
+	chars = s.chars
 	i = 0
 	j = s.length - 1
 	while i < j
