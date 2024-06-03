@@ -10,12 +10,15 @@
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
+.idea/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
 build/
+
+.metadata
 
 # Symbolication related
 app.*.symbols
@@ -27,3 +30,11 @@ app.*.map.json
 android/app/debug
 android/app/profile
 android/app/release
+
+# Platform related not required due to exercise only
+android
+ios
+linux
+macos
+web
+windows
