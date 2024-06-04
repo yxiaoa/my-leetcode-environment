@@ -12,27 +12,39 @@ class TreeNode {
 class ListNode {
 	val: number
 	next: ListNode | null
-	constructor(val?: number, next?: ListNode | null);
-	constructor(val?: number | number[], next?: ListNode | null) {
-		if (typeof val === 'number') {
-			this.val = (val === undefined ? 0 : val)
-			this.next = (next === undefined ? null : next)
-		} else {
-			//TODO
-		}
+	constructor(val?: number, next?: ListNode | null) {
+		this.val = (val === undefined ? 0 : val)
+		this.next = (next === undefined ? null : next)
 	}
-
-
+	static array_to_list(num: number[]): ListNode {
+		var i = num.length - 1;
+		var head = new ListNode(num[i]);
+		while (i >= 0) {
+			var new_head = new ListNode(num[i], head);
+			head = new_head;
+			i--;
+		}
+		return head;
+	}
+	static list_to_array(head: ListNode): number[] {
+		return [0];
+	}
 }
 
 function insertGreatestCommonDivisors(head: ListNode | null): ListNode | null {
 	return head;
 };
 
-var input0 = [[18,6,10,3]]
+function countTestedDevices(batteryPercentages: number[]): number {
+	return batteryPercentages.reduce((cnt, b) => b > cnt ? cnt + 1 : cnt, 0);
+};
+
+//var input0 = [[18, 6, 10, 3]]
+var input0 = [[1, 1, 2, 1, 3], [0, 1, 2]]
 var input1 = [1, 6, 9, 3, 7, 3]
 var input2 = [1, 2, 3, 0, 9]
-var expect = [[18,6,6,2,10,1,3]]
+//var expect = [[18, 6, 6, 2, 10, 1, 3]]
+var expect = [3, 2]
 var optimize_time = false
 
 var fail_cnt = 0
@@ -45,7 +57,8 @@ for (let i = 0; i < input0.length; i++) {
 	//inputTree.left = new TreeNode(1);
 	//inputTree.right = new TreeNode(1);
 
-	var output = insertGreatestCommonDivisors(input0[i])
+	//var output = insertGreatestCommonDivisors(ListNode.array_to_list(input0[i]))
+	var output = countTestedDevices(input0[i])
 
 	if (expect[i].toString() != output.toString()) {
 		fail_cnt++
