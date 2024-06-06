@@ -1,0 +1,35 @@
+/****** Pre define  ******/
+
+
+/****** Header file  ******/
+
+-i"C:\msys64\mingw64\x86_64-w64-mingw32\include\"
+-i"C:\msys64\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\"
+-i"C:\Ruby27-x64\lib\ruby\gems\2.7.0\gems\ceedling-0.31.1\vendor\unity\src"
+-i.\src
+-i.\lib\Service
+-i.\lib\inc
+
+
+/****** Pre define  ******/
+
+//+libdir( .\platform\mcu\stm32f407\Startup_config, .\platform\mcu\stm32f407\STM32F4_FWLIB\inc)
+-elib(309)                      // Ignore "#error" symbol in library
+-wlib(1)                        // Error only for lib
++fce                            // Continue on error
+-si4 -spN4 -spF4                // size int 4 bytes, size pointer 4 bytes
+
+
+/****** Rules  ******/
+
+-i.\.lint
+au-misra3.lnt                   // include MISRA C 2012 PC-lint file
+
+
+/****** User Option  ******/
+
+-e793                           // Suppress limit for macro length
+-e717                           // Suppress do... while(0)
+-e613                           // Suppress possible null pointer because of malloc & calloc
+-esym(586, malloc, qsort)
+-esym(970, int)
