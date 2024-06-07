@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace Solution
+namespace Leetcode
 {
-	public class LeetcodeSolution
+	public class Solution
 	{
 		public int CountTestedDevices(int[] batteryPercentages)
 		{
