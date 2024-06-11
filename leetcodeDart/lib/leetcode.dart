@@ -21,6 +21,9 @@ class ListNode {
 }
 
 class Solution {
+  int strStr(String haystack, String needle) {
+    return haystack.indexOf(needle);
+  }
   int countTestedDevices(List<int> batteryPercentages) {
     var cnt = 0;
     batteryPercentages.forEach((b) {
