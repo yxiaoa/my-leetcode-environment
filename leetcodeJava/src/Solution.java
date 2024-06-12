@@ -5,6 +5,10 @@ import java.text.*;
 import static java.lang.Integer.*;
 
 public class Solution {
+	public int strStr(String haystack, String needle) {
+		return haystack.indexOf(needle);
+	}
+
 	public int countTestedDevices(int[] batteryPercentages) {
 		int cnt = 0;
 		for (int b : batteryPercentages) {
