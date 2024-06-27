@@ -15,9 +15,7 @@
 
 #### Debug
 
-1. add configuration - js
-    - Program set to js
-2. F5: Launch debugging
+1. Run and Debug choose Jest All configuration
 
 #### Unit test
 
