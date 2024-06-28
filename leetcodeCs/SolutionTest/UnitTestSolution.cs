@@ -7,6 +7,18 @@ namespace SolutionTest
 	public class UnitTestSolution
 	{
 		[TestMethod]
+		public void TestGcdOfStrings()
+		{
+			string[] input0 = { "ABCABC", "ABABAB", "LEET" };
+			string[] input1 = { "ABC", "ABAB", "CODE" };
+			string[] expect = { "ABC", "AB", "" };
+			Solution sln = new();
+			for (int i = 0; i < input0.Length; i++)
+			{
+				Assert.AreEqual(expect[i], sln.GcdOfStrings(input0[i], input1[i]));
+			}
+		}
+		[TestMethod]
 		public void TestCountTestedDevices()
 		{
 			int[][] input0 = { new int[] { 1, 1, 2, 1, 3 }, new int[] { 0, 1, 2 } };
