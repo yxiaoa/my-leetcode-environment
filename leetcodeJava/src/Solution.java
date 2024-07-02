@@ -5,6 +5,14 @@ import java.text.*;
 import static java.lang.Integer.*;
 
 public class Solution {
+	public int minimumOperations(int[] nums) {
+		int sum = 0;
+		for (int n : nums) {
+			sum += (n % 3) > 0 ? 1 : 0;
+		}
+		return sum;
+	}
+
 	public int minimumChairs(String s) {
 		int cnt = 0;
 		int max = 0;
