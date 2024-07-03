@@ -1,0 +1,90 @@
+{
+        // Use IntelliSense to learn about possible attributes.
+        // Hover to view descriptions of existing attributes.
+        // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+                {
+                        "name": "Debug Local File",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",
+                        "program": "${fileDirname}/${fileBasename}",
+                        "stopOnEntry": false,
+                        "showDebuggerOutput": true,
+                        "args": [],
+                        "pathToRDebugIDE": "rdebug-ide",
+                },
+                {
+                        "name": "Minitest - current line",
+                        "type": "Ruby",
+                        "request": "launch", 
+                        "cwd": "${fileDirname}",
+                        "program": "${fileDirname}/bin/rails",
+                        "args": [
+                            "test",
+                            "${file}:${lineNumber}"
+                        ]
+                },
+                    {   //仅对当前打开的测试文件运行Test::Unit
+                        "name": "Test::Unit - open test file",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",          
+                        "program": "${file}",
+                        "includes": ["test", "lib"] //使用includes在$LOAD_PATH中包含其他路径。
+                    },
+                    {   //在当前打开的文件中,对单个选定的测试运行Test::Unit 
+                        "name": "Test::Unit - single selected test",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",          
+                        "program": "${file}",
+                        "includes": ["test", "lib"],
+                        "args": [
+                            "-n",
+                            "${selectedText}"
+                        ]
+                    },
+                    {   //这将在源文件目录下运行rails服务器,假设binstubs已经通过bundler install --binstubs安装
+                        "name": "Rails server",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",
+                        "program": "${fileDirname}/bin/rails",
+                        "args": ["server"]
+                    },
+                    {   //使用传递过来的额外参数,运行所有的spec
+                        "name": "RSpec - all",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",
+                        "program": "${fileDirname}/bin/rspec",
+                        "args": [
+                            "-I", "${fileDirname}",
+                            "--require", "spec_helper",
+                            "--require", "rails_helper",
+                            "--format", "documentation",
+                        ]
+                    },
+                    {   //运行RSpec,不过只在当前打开的spec文件上
+                        "name": "RSpec - active spec file only",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",
+                        "program": "${fileDirname}/bin/rspec",
+                        "args": [
+                            "-I",
+                            "${fileDirname}",
+                            "${file}"
+                        ]
+                    }, 
+                    {   //运行所有cuke
+                        "name": "Cucumber",
+                        "type": "Ruby",
+                        "request": "launch",
+                        "cwd": "${fileDirname}",
+                        "program": "${fileDirname}/bin/cucumber"
+                    },
+        ]
+}
