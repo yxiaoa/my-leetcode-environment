@@ -1,6 +1,10 @@
-import {expect, jest, test} from '@jest/globals';
-import test_add from '../src/Solution';
+import { expect, jest, test } from '@jest/globals';
+import { countTestedDevices } from '../src/Solution';
 
-test('hello world test', () => {
-    expect(test_add(2,3)).toBe(5);
+test('countTestedDevices', () => {
+	var input0 = [[1, 1, 2, 1, 3], [0, 1, 2]];
+	var expected = [3, 2];
+	for (let i = 0; i < input0.length; i++) {
+		expect(countTestedDevices(input0[i])).toBe(expected[i]);
+	}
 });

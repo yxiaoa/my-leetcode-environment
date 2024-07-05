@@ -4,6 +4,6 @@ export class Solution {
 	}
 }
 
-export default function test_add(a: number, b: number): number {
-	return a + b;
-}
+export function countTestedDevices(batteryPercentages: number[]): number {
+	return batteryPercentages.reduce((cnt, b) => b > cnt ? cnt + 1 : cnt, 0);
+};

@@ -35,10 +35,6 @@ function insertGreatestCommonDivisors(head: ListNode | null): ListNode | null {
 	return head;
 };
 
-function countTestedDevices(batteryPercentages: number[]): number {
-	return batteryPercentages.reduce((cnt, b) => b > cnt ? cnt + 1 : cnt, 0);
-};
-
 //var input0 = [[18, 6, 10, 3]]
 var input0 = [[1, 1, 2, 1, 3], [0, 1, 2]]
 var input1 = [1, 6, 9, 3, 7, 3]
