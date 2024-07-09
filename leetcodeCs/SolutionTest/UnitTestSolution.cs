@@ -7,6 +7,18 @@ namespace SolutionTest
 	public class UnitTestSolution
 	{
 		[TestMethod]
+		public void TestNumPrimeArrangements()
+		{
+			int[] input0 = { 5, 100 };
+			int[] expect = { 12, 682289015 };
+			Solution sln = new();
+			for (int i = 0; i < input0.Length; i++)
+			{
+				Assert.AreEqual(expect[i], sln.NumPrimeArrangements(input0[i]));
+				//TODO check time cost
+			}
+		}
+		[TestMethod]
 		public void TestGcdOfStrings()
 		{
 			string[] input0 = { "ABCABC", "ABABAB", "LEET" };
