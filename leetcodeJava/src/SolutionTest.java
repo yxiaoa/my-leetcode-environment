@@ -1,8 +1,23 @@
 import static org.junit.Assert.assertEquals;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class SolutionTest {
+	@Test
+	public void test_sumIndicesWithKSetBits() {
+		Integer[][] input0 = { { 5, 10, 1, 5, 2 }, { 4, 3, 2, 1 } };
+		int[] input1 = { 1, 2 };
+		int[] expect = { 13, 1 };
+
+		Solution sln = new Solution();
+
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.sumIndicesWithKSetBits(Arrays.asList(input0[i]), input1[i]));
+		}
+	}
+
 	@Test
 	public void test_minimumOperations() {
 		int[][] input0 = { { 1, 2, 3, 4 }, { 3, 6, 9 } };
