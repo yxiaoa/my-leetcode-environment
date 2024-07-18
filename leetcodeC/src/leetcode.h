@@ -24,11 +24,10 @@ struct TreeNode {
 	struct TreeNode *right;
 };
 
-char **summaryRanges(int *nums, int numsSize, int *returnSize);
-int maximizeSum(int* nums, int numsSize, int k);
-
-
+//TODO below
 int* shortestToChar(char* s, char c, int* returnSize);
-char* decodeMessage(char* key, char* message);
+char **summaryRanges(int *nums, int numsSize, int *returnSize);
+char** uncommonFromSentences(char* s1, char* s2, int* returnSize);
+int *findIntersectionValues(int *nums1, int nums1Size, int *nums2, int nums2Size, int *returnSize);
 
 #endif // LEETCODE_H

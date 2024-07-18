@@ -52,14 +52,38 @@ int* shortestToChar(char* s, char c, int* returnSize) {
 	return ret;
 }
 
-char * makeSmallestPalindrome(char * s){
-	int i = 0, j = strlen(s) - 1;
-	while (i < j) {
-		if (s[i] < s[j]) {
-			s[j] = s[i];
-		} else {
-			s[i] = s[j];
+typedef struct {
+	char *str;
+	int cnt;
+} word_t;
+
+char** uncommonFromSentences(char* s1, char* s2, int* returnSize) {
+	// split words
+	int words_total = 1;
+	int i;
+	for (i = 0; s1[i] != '\0'; i++) {
+		if (s1[i] == ' ') {
+			words_total++;
 		}
 	}
-	return s;
+
+	for (i = 0; s2[i] != '\0'; i++)
+	{
+		if (s2[i] == ' ') {
+			words_total++;
+		}
+	}
+
+	// search and count
+	word_t *words_map = (word_t *)malloc(sizeof(word_t) * words_total);
+	int words_cnt = 0;
+		// sum = if = 1 ++, else --
+
+
+	// find words which only 1
+
+
+	return NULL;
 }
+
+

@@ -1,7 +1,6 @@
 #include "unity.h"
 
 #include "leetcode.h"
-#include "big_data.h"
 #include "List.h"
 #include <time.h>
 //#include <windows.h>
@@ -43,10 +42,10 @@ void tearDown(void)
 {
 }
 
-#define TEST_CLASS      INPUT_OUTPUT_CLASS(SINGLE_VALUE, SINGLE_VALUE)
+#define TEST_CLASS      INPUT_OUTPUT_CLASS(SINGLE_VALUE, ARRAY_1)
 
 #define INPUT0_TYPE     char*
-#define INPUT1_TYPE     char
+#define INPUT1_TYPE     char*
 #define OUTPUT_TYPE     char*
 
 #if TEST_CLASS == TEST_CLASS_INPUT_VAR_OUTPUT_VAR
@@ -55,9 +54,7 @@ void tearDown(void)
 #define EXPECT_VALUE	{"efcfe", "abba", "neven"}
 #endif
 
-char * makeSmallestPalindrome(char * s);
-
-#define TEST_FUNC_OUTPUT makeSmallestPalindrome(input0[i])
+#define TEST_FUNC_OUTPUT uncommonFromSentences(input0, input1, &retSize)
 #define ASSERT_FUNC      TEST_ASSERT_EQUAL_STRING_MESSAGE
 
 #if TEST_CLASS == TEST_CLASS_INPUT_VAR_OUTPUT_VAR
@@ -110,9 +107,9 @@ void test_3(void)
 #elif TEST_CLASS == INPUT_OUTPUT_CLASS(SINGLE_VALUE, ARRAY_1)
 void test_1(void)
 {
-	INPUT0_TYPE input0 = "loveleetcode";
-	INPUT1_TYPE input1 = 'e';
-	OUTPUT_TYPE expect[] = {3,2,1,0,1,0,0,1,2,2,1,0};
+	INPUT0_TYPE input0 = "this apple is sweet";
+	INPUT1_TYPE input1 = "this apple is sour";
+	OUTPUT_TYPE expect[] = {"sweet","sour"};
 	OUTPUT_TYPE *output;
 	int retSize;
 

@@ -1,4 +1,5 @@
 #include "solution.h"
+#include <stdlib.h>
 #include <string.h>
 
 char *makeSmallestPalindrome(char *s)
@@ -13,4 +14,11 @@ char *makeSmallestPalindrome(char *s)
 		i++, j--;
 	}
 	return s;
+}
+
+int *findIntersectionValues(int *nums1, int nums1Size, int *nums2, int nums2Size, int *returnSize)
+{
+	int *ret = (int *)malloc(2 * sizeof(int));
+	*returnSize = 2;
+	return ret;
 }
