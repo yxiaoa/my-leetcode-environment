@@ -21,6 +21,30 @@ class ListNode {
 }
 
 class Solution {
+  int longestPalindrome(String s) {
+    var map = <String, int>{};
+    var sum = 0;
+    var res = 0;
+    for (var i = 0; i < s.length; i++) {
+      String c = s[i];
+      if (map[c] != null) {
+        map[c] = (map[c])! + 1;
+      } else {
+        map[c] = 1;
+      }
+    }
+    map.forEach((key, value) {
+      if (value % 2 == 0) {
+        sum += value;
+      } else {
+        sum += value - 1;
+        res = 1;
+      }
+    });
+    //TODO refactor
+    return sum + res;
+  }
+
   int _gcd(int a, int b) {
     var c = a % b;
     while (c != 0) {

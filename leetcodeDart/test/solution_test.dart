@@ -2,6 +2,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:leetcode/solution.dart';
 
 void main() {
+  test("test longestPalindrome", () {
+    var input0 = ["abccccdd", "a"];
+    var expected = [7, 1];
+
+    final sln = Solution();
+    for (var i = 0; i < input0.length; i++) {
+      var output = sln.longestPalindrome(input0[i]);
+      expect(output, expected[i]);
+    }
+  });
   test("test gcdOfStrings", () {
     var input0 = ["ABCABC", "ABABAB", "LEET"];
     var input1 = ["ABC", "ABAB", "CODE"];
