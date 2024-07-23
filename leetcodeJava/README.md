@@ -40,3 +40,6 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 #### Format & Lint
 
 https://code.visualstudio.com/docs/java/java-linting
+
+1. Directly use Format Document Command
+2. Install SonarLint extension
