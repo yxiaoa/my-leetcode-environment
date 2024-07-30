@@ -33,14 +33,10 @@ int *findIntersectionValues(int *nums1, int nums1Size, int *nums2, int nums2Size
 		map[1][nums2[i]] = 1;
 	}
 	for (i = 0; i < nums1Size; i++) {
-		if (1 == map[1][nums1[i]]) {
-			ret[0]++;
-		}
+		ret[0] += map[1][nums1[i]];
 	}
 	for (i = 0; i < nums2Size; i++) {
-		if (1 == map[0][nums2[i]]) {
-			ret[1]++;
-		}
+		ret[1] += map[0][nums2[i]];
 	}
 	return ret;
 }
