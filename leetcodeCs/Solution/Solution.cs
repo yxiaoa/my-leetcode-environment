@@ -34,7 +34,7 @@ namespace Leetcode
 		private long Factor(int n)
 		{
 			long f = 1;
-			for (int i = 1; i <= n; i++)
+			for (int i = 2; i <= n; i++)
 			{
 				f = f * i % mod;
 			}
