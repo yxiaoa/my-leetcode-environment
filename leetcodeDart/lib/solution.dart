@@ -27,21 +27,12 @@ class Solution {
     var res = 0;
     for (var i = 0; i < s.length; i++) {
       String c = s[i];
-      if (map[c] != null) {
-        map[c] = (map[c])! + 1;
-      } else {
-        map[c] = 1;
-      }
+      map[c] = (map[c] ?? 0) + 1;
     }
     map.forEach((key, value) {
-      if (value % 2 == 0) {
-        sum += value;
-      } else {
-        sum += value - 1;
-        res = 1;
-      }
+      sum += value & ~1;
+      res |= value & 1;
     });
-    //TODO refactor
     return sum + res;
   }
 
