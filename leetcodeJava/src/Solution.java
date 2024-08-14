@@ -5,6 +5,19 @@ import java.text.*;
 import static java.lang.Integer.*;
 
 public class Solution {
+	public int longestPalindrome(String s) {
+		int[] map = new int[58];
+		int sum = 0;
+		int res = 0;
+		for (char c : s.toCharArray()) {
+			map[c - 'A']++;
+		}
+		for (int i = 0; i < map.length; i++) {
+			sum += map[i] & ~1;
+			res |= map[i] & 1;
+		}
+		return sum + res;
+	}
 	public int findPoisonedDuration(int[] timeSeries, int duration) {
 		int sum = 0;
 		for (int i = 0; i < timeSeries.length - 1; i++) {
