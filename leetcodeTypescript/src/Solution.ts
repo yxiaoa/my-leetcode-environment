@@ -5,13 +5,10 @@ export class ListNode {
 		this.val = (val ?? 0)
 		this.next = (next ?? null)
 	}
-	static array_to_list(num: number[]): ListNode {
-		let i = num.length - 1;
-		let head = new ListNode(num[i]);
-		while (i >= 0) {
-			let new_head = new ListNode(num[i], head);
-			head = new_head;
-			i--;
+	static array_to_list(num: number[]): ListNode | null {
+		let head: ListNode | null = null;
+		for (let i = num.length - 1; i >= 0; i--) {
+			head = new ListNode(num[i], head);
 		}
 		return head;
 	}
@@ -36,7 +33,24 @@ export class TreeNode {
 	}
 }
 
+function GCD(val1: number, val2: number): number {
+	let c = val1 % val2;
+	while (c != 0) {
+		val1 = val2;
+		val2 = c;
+		c = val1 % val2;
+	}
+	return val2;
+}
+
 export function insertGreatestCommonDivisors(head: ListNode | null): ListNode | null {
+	let cur = head;
+	while (cur?.next) {
+		let gcd = new ListNode(GCD(cur.val, cur.next.val));
+		gcd.next = cur?.next;
+		cur.next = gcd;
+		cur = gcd.next;
+	}
 	return head;
 };
 

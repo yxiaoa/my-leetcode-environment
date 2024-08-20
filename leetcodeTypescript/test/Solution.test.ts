@@ -14,7 +14,7 @@ test('insertGreatestCommonDivisors', () => {
 	let expected = [[18, 6, 6, 2, 10, 1, 3], [7]];
 	for (let i = 0; i < input0.length; i++) {
 		let output = solution.insertGreatestCommonDivisors(solution.ListNode.array_to_list(input0[i]));
-		expect(solution.ListNode.list_to_array(output)).toBe(expected[i]);
+		expect(solution.ListNode.list_to_array(output)).toStrictEqual(expected[i]);
 	}
 });
 
