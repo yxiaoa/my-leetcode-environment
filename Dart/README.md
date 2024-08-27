@@ -20,10 +20,10 @@ samples, guidance on mobile development, and a full API reference.
 ### Dart
 
 1. Install vscode extension flutter
-	1. 打开 View > Command Palette
-	2. 输入 “doctor”，选择 Flutter: Run Flutter Doctor
-	3. 打开 OUTPUT 面板查看是否有错误，确保在不同的输出选项 (Output Options) 的下拉列表中选择了 Flutter
-2. 创建项目
+	1. View > Command Palette
+	2. Type "doctor"，select Flutter: Run Flutter Doctor
+	3. Open OUTPUT panel and check if errors exist, make sure Flutter is selected in the lists for different Output Options
+2. Create project
 	1. Flutter: New Project
 	2. Run > Start Debugging / Run > Start Without Debugging
 		* 如无法运行，运行flutter doctor，看开发环境是否缺少，根据提示安装

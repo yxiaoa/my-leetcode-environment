@@ -1,9 +1,11 @@
 mod solution;
 
 fn main() {
-    let input0 = ["egcfe", "abcd", "seven"];
-    let input1 = [34];
-    let expect = ["efcfe", "abba", "neven"];
+//    let input0 = ["egcfe", "abcd", "seven"];
+//    let input1 = [34];
+//    let expect = ["efcfe", "abba", "neven"];
+	let input0 = [vec![1,1,2,1,3], vec![0,1,2]];
+	let expect = [3,2];
 
     let mut fail_cnt = 0;
     let input_size = input0.len();
@@ -17,7 +19,8 @@ fn main() {
 
     for i in 0..input_size {
         //let input_string = input0[i].iter().map(|s| s.to_string()).collect();
-        let output = solution::Solution::make_smallest_palindrome(String::from(input0[i]));
+        //let output = solution::Solution::make_smallest_palindrome(String::from(input0[i]));
+	let output = solution::Solution::count_tested_devices(input0[i].clone());
 
         if output != expect[i] {
             fail_cnt += 1;

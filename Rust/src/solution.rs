@@ -39,4 +39,13 @@ impl Solution {
 		}
 		return String::from_utf8(chars).unwrap();
 	}
+	pub fn count_tested_devices(battery_percentages: Vec<i32>) -> i32 {
+		let mut cnt = 0;
+		for b in battery_percentages {
+		    if b > cnt {
+			cnt += 1;
+		    }
+		}
+		cnt
+	}
 }
