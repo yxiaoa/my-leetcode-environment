@@ -11,6 +11,6 @@
 --The name of the column that returns the statistics needs to be changed
 --If the query does not return any results, nothing will be returned
 SELECT
-	*
+	AVG(student_count) AS average_student_count
 FROM
 	courses;
