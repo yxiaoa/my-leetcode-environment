@@ -34,3 +34,6 @@
 
 3. ESLint extension
 
+#### TODO
+
+- [ ] consider how to separate exercises
