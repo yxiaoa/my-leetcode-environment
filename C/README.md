@@ -13,3 +13,7 @@ solution & test_solution for solution
 2. Run in terminal
    - ceedling
    - or ceedling test:leetcode
+
+
+TODO: 
+- [ ] add exercise, see https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md#module-generator

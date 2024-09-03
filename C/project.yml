@@ -13,7 +13,7 @@
 #  :release_build: TRUE
   :test_file_prefix: test_
   :which_ceedling: gem
-  :ceedling_version: 0.30.0
+  :ceedling_version: 0.31.1
   :default_tasks:
     - test:all
 
@@ -34,12 +34,12 @@
     - +:test/**
     - -:test/support
   :source:
-    - src/**
+    - solution/**
   :support:
     - test/support
     - lib/service
     - lib/include
-  :libraries:
+  :libraries: []
 
 :defines:
   # in order to add common defines:
