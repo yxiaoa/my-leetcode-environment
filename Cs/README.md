@@ -44,3 +44,6 @@ TBD
 
 TBD
 
+TODO:
+- [ ] separate exercises
+
