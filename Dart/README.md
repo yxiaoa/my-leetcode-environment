@@ -26,10 +26,10 @@ samples, guidance on mobile development, and a full API reference.
 2. Create project
 	1. Flutter: New Project
 	2. Run > Start Debugging / Run > Start Without Debugging
-		* 如无法运行，运行flutter doctor，看开发环境是否缺少，根据提示安装
-3. 以调试 (debug)、性能 (profile) 或发布 (release) 模式运行应用
+		* If fail, run flutter doctor to check environment and install required runtime environment
+3. Use debug/profile/release mode run application
 	1. launch.json
-	2. 在 configurations 部分，修改 flutterMode 属性值为你想要的构建模式即可
+	2. configurations - flutterMode change to expected mode
 		```
 			"configurations": [
 				{

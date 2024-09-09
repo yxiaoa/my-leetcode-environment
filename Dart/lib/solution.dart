@@ -21,6 +21,10 @@ class ListNode {
 }
 
 class Solution {
+  String removeTrailingZeros(String num) {
+    return num.replaceAll(RegExp(r'0+$'), '');
+  }
+
   List<int> findIntersectionValues(List<int> nums1, List<int> nums2) {
     var set1 = nums1.toSet();
     var set2 = nums2.toSet();
@@ -28,6 +32,7 @@ class Solution {
     var cnt2 = nums2.where((n) => set1.contains(n)).length;
     return List<int>.from([cnt1, cnt2]);
   }
+
   int numPrimeArrangements(int n) {
     var primeCount = countPrimes(n);
     var nonPrimeCount = n - primeCount;
