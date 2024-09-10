@@ -5,6 +5,10 @@ import java.text.*;
 import static java.lang.Integer.*;
 
 public class Solution {
+	public String removeTrailingZeros(String num) {
+		return num.replaceAll("0*$", "");
+	}
+
 	public int[] findIntersectionValues(int[] nums1, int[] nums2) {
 		int cnt1 = 0;
 		int cnt2 = 0;
@@ -28,6 +32,7 @@ public class Solution {
 		}
 		return new int[] { cnt1, cnt2 };
 	}
+
 	public int longestPalindrome(String s) {
 		int[] map = new int[58];
 		int sum = 0;
@@ -41,6 +46,7 @@ public class Solution {
 		}
 		return sum + res;
 	}
+
 	public int findPoisonedDuration(int[] timeSeries, int duration) {
 		int sum = 0;
 		for (int i = 0; i < timeSeries.length - 1; i++) {
