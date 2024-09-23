@@ -8,12 +8,27 @@ namespace SolutionTest
 	public class UnitTestSolution
 	{
 		[TestMethod]
+		public void TestSurfaceArea()
+		{
+			int[][][] input0 = { new int[][] { new int[] { 1, 2 }, new int[] { 3, 4 } },
+			 new int[][] { new int[]{1,1,1},new int[]{1,0,1},new int[]{1,1,1}} ,
+			 new int[][] {new int[]{2,2,2},new int[]{2,1,2},new int[]{2,2,2}}};
+			int[] expect = { 34, 32, 46 };
+			int output;
+			Solution.Solution sln = new();
+			for (int i = 0; i < input0.Length; i++)
+			{
+				output = sln.SurfaceArea(input0[i]);
+				Assert.AreEqual(expect[i], output);
+			}
+		}
+		[TestMethod]
 		public void TestFindIntersectionValues()
 		{
 			int[][] input0 = { new int[] { 2, 3, 2 }, new int[] { 4, 3, 2, 3, 1 }, new int[] { 3, 4, 2, 3 } };
 			int[][] input1 = { new int[] { 1, 2 }, new int[] { 2, 2, 5, 2, 3, 6 }, new int[] { 1, 5 } };
 			int[][] expect = { new int[] { 2, 1 }, new int[] { 3, 4 }, new int[] { 0, 0 } };
-			Solution sln = new();
+			Solution.Solution sln = new();
 			for (int i = 0; i < input0.Length; i++)
 			{
 				int[] output = sln.FindIntersectionValues(input0[i], input1[i]);
@@ -29,7 +44,7 @@ namespace SolutionTest
 		{
 			int[] input0 = { 5, 100 };
 			int[] expect = { 12, 682289015 };
-			Solution sln = new();
+			Solution.Solution sln = new();
 
 			Stopwatch stopwatch = new();
 			stopwatch.Start();
@@ -49,7 +64,7 @@ namespace SolutionTest
 			string[] input0 = { "ABCABC", "ABABAB", "LEET" };
 			string[] input1 = { "ABC", "ABAB", "CODE" };
 			string[] expect = { "ABC", "AB", "" };
-			Solution sln = new();
+			Solution.Solution sln = new();
 			for (int i = 0; i < input0.Length; i++)
 			{
 				Assert.AreEqual(expect[i], sln.GcdOfStrings(input0[i], input1[i]));
@@ -60,7 +75,7 @@ namespace SolutionTest
 		{
 			int[][] input0 = { new int[] { 1, 1, 2, 1, 3 }, new int[] { 0, 1, 2 } };
 			int[] expect = { 3, 2 };
-			Solution sln = new();
+			Solution.Solution sln = new();
 			for (int i = 0; i < input0.Length; i++)
 			{
 				Assert.AreEqual(expect[i], sln.CountTestedDevices(input0[i]));
@@ -71,7 +86,7 @@ namespace SolutionTest
 		{
 			string[] input0 = { "egcfe", "abcd", "seven" };
 			string[] expect = { "efcfe", "abba", "neven" };
-			Solution sln = new();
+			Solution.Solution sln = new();
 			for (int i = 0; i < input0.Length; i++)
 			{
 				Assert.AreEqual(expect[i], sln.MakeSmallestPalindrome(input0[i]));
@@ -82,7 +97,7 @@ namespace SolutionTest
 		{
 			int[][] input0 = { new int[] { 10, 4, 8, 3 }, new int[] { 1 } };
 			int[][] expect = { new int[] { 15, 1, 11, 22 }, new int[] { 0 } };
-			Solution sln = new();
+			Solution.Solution sln = new();
 			for (int i = 0; i < input0.Length; i++)
 			{
 				int[] output = sln.LeftRightDifference(input0[i]);
