@@ -32,7 +32,7 @@ export class TreeNode {
 		this.right = (right ?? null)
 	}
 }
-
+//TODO separate the functions into different files
 function GCD(val1: number, val2: number): number {
 	let c = val1 % val2;
 	while (c != 0) {

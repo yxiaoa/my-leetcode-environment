@@ -33,7 +33,3 @@
 2. VS Code includes some handy refactorings for TypeScript such as Extract function and Extract constant. Just select the source code you'd like to extract and then click on the light bulb in the gutter or press (Ctrl+.) to see available refactorings.
 
 3. ESLint extension
-
-#### TODO
-
-- [ ] consider how to separate exercises
