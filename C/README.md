@@ -14,6 +14,11 @@ solution & test_solution for solution
    - ceedling
    - or ceedling test:exerciseName
 
+#### Debug
+
+1. open related test_exerciseName.c and set breakpoints
+2. Run - Start Debugging
+
 #### Exercise
 
 1. ceedling module:create[exerciseName]
@@ -23,6 +28,3 @@ solution & test_solution for solution
 #### Reference
 
 https://github.com/ThrowTheSwitch/Ceedling/tree/master/docs
-
-TODO: 
-- [ ] add exercise folder

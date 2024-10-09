@@ -34,12 +34,18 @@
     - +:test/**
     - -:test/support
   :source:
-    - solution/**
+    - exercise/**
   :support:
     - test/support
     - lib/service
     - lib/include
   :libraries: []
+
+:module_generator:
+  :project_root: ./
+  :source_root: exercise/
+  # :inc_root: inc/
+  :test_root: test/
 
 :defines:
   # in order to add common defines:

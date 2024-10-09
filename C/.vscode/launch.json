@@ -8,7 +8,7 @@
             "name": "gcc.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/test/out/test_solution.out",
+            "program": "${workspaceFolder}/build/test/out/${fileBasenameNoExtension}.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
