@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Solution
 {
-	public class Solution
+	public partial class Solution
 	{
 		public int SurfaceArea(int[][] grid)
 		{

@@ -43,7 +43,3 @@ TBD
 #### Format & Lint
 
 TBD
-
-TODO:
-- [ ] separate exercises
-
