@@ -23,7 +23,7 @@
 2. Add scripts config in package.json
 3. Add jest.config.js
 4. Add testcase in test directory
-5. npm run test
+5. npm run test [exerciseName]
    - npm run test -c get test coverage
 
 #### Format & Lint
