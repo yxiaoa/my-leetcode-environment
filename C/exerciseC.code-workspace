@@ -23,7 +23,8 @@
 			"cmath": "c",
 			"big_data.h": "c",
 			"tree.h": "c",
-			"findintersectionvalues.h": "c"
+			"findintersectionvalues.h": "c",
+			"countpoints.h": "c"
 		},
 		"c-cpp-flylint.includePaths": [
 			"C:\\Ruby27-x64\\lib\\ruby\\gems\\2.7.0\\gems\\ceedling-0.31.1\\vendor\\unity\\src",
