@@ -1,6 +1,6 @@
 import pandas as pd
 import unittest
-from exercise.students_and_examinations import *
+from exercise.students_and_examinations import students_and_examinations
 
 
 class TestStudentsAndExaminations(unittest.TestCase):

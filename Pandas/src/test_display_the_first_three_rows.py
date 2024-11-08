@@ -1,6 +1,6 @@
 import pandas as pd
 import unittest
-from exercise.display_the_first_three_rows import *
+from exercise.display_the_first_three_rows import selectFirstRows
 
 class TestSelectFirstRows(unittest.TestCase):
     def test_selectFirstRows(self):
