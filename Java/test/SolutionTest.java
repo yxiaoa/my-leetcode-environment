@@ -1,14 +1,36 @@
+package test;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import org.junit.Test;
 
+import exercise.Solution;
+
 public class SolutionTest {
+	@Test
+	public void testCountPointsExample1() {
+		int[][] input0 = { { 1, 3 }, { 3, 3 }, { 5, 3 }, { 2, 2 } };
+		int[][] input1 = { { 2, 3, 1 }, { 4, 3, 1 }, { 1, 1, 2 } };
+		int[] expect = { 3, 2, 2 };
+		Solution sln = new Solution();
+		assertArrayEquals(expect, sln.countPoints(input0, input1));
+	}
+
+	@Test
+	public void testCountPointsExample2() {
+		int[][] input0 = { { 1, 1 }, { 2, 2 }, { 3, 3 }, { 4, 4 }, { 5, 5 } };
+		int[][] input1 = { { 1, 2, 2 }, { 2, 2, 2 }, { 4, 3, 2 }, { 4, 3, 3 } };
+		int[] expect = { 2, 3, 2, 4 };
+		Solution sln = new Solution();
+		assertArrayEquals(expect, sln.countPoints(input0, input1));
+	}
+
 	@Test
 	public void test_shortestToChar() {
 		String[] input0 = { "loveleetcode", "aaab", "aaba" };
 		char[] input1 = { 'e', 'b', 'b' };
-		int[][] expect = { { 3,2,1,0,1,0,0,1,2,2,1,0 }, { 3, 2, 1, 0 }, { 2, 1, 0, 1 } };
+		int[][] expect = { { 3, 2, 1, 0, 1, 0, 0, 1, 2, 2, 1, 0 }, { 3, 2, 1, 0 }, { 2, 1, 0, 1 } };
 		Solution sln = new Solution();
 		for (int i = 0; i < input0.length; i++) {
 			assertArrayEquals(expect[i], sln.shortestToChar(input0[i], input1[i]));
