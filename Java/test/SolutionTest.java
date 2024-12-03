@@ -3,11 +3,29 @@ package test;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Test;
 
 import exercise.Solution;
 
 public class SolutionTest {
+	@Test
+	public void testDestCity() {
+		String[][][] input0 = { { { "London", "New York" }, { "New York", "Lima" }, { "Lima", "Sao Paulo" } },
+				{ { "B", "C" }, { "D", "B" }, { "C", "A" } }, { { "A", "Z" } } };
+		String[] expect = { "Sao Paulo", "A", "Z" };
+		Solution sln = new Solution();
+
+		for (int i = 0; i < input0.length; i++) {
+			List<List<String>> paths = new java.util.ArrayList<>();
+			for (String[] path : input0[i]) {
+				paths.add(Arrays.asList(path));
+			}
+			assertEquals(expect[i], sln.destCity(paths));
+		}
+	}
+
 	@Test
 	public void testCountPointsExample1() {
 		int[][] input0 = { { 1, 3 }, { 3, 3 }, { 5, 3 }, { 2, 2 } };
