@@ -32,7 +32,7 @@ export class TreeNode {
 		this.right = (right ?? null)
 	}
 }
-//TODO separate the functions into different files
+
 function GCD(val1: number, val2: number): number {
 	let c = val1 % val2;
 	while (c != 0) {
@@ -54,21 +54,4 @@ export function insertGreatestCommonDivisors(head: ListNode | null): ListNode | 
 	return head;
 };
 
-export function countTestedDevices(batteryPercentages: number[]): number {
-	return batteryPercentages.reduce((cnt, b) => b > cnt ? cnt + 1 : cnt, 0);
-};
 
-export function countPoints(points: number[][], queries: number[][]): number[] {
-	let res: number[] = [];
-	for (let q of queries) {
-		let cnt = 0;
-		for (let p of points) {
-			let dist = (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2;
-			if (dist <= q[2] ** 2) {
-				cnt += 1;
-			}
-		}
-		res.push(cnt);
-	}
-	return res;
-};
