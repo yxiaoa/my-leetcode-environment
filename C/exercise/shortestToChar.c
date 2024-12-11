@@ -5,7 +5,8 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-int* shortestToChar(char* s, char c, int* returnSize) {
+int *shortestToChar(char *s, char c, int *returnSize)
+{
 	int len = strlen(s);
 	int *ret = (int *)malloc(sizeof(int) * len);
 	int *pos = (int *)malloc(sizeof(int) * (len + 2));

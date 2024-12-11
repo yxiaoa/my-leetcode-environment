@@ -1,4 +1,5 @@
 #include "makeSmallestPalindrome.h"
+#include <string.h>
 
 char *makeSmallestPalindrome(char *s)
 {
