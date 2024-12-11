@@ -2,18 +2,9 @@
 
 #include "unity.h"
 
-#include "solution.h"
-#include <string.h>
+#include "findIntersectionValues.h"
 
-#define getLen(arr) (int)(sizeof(arr) / sizeof(arr[0]))
-#define INPUT_SIZE  getLen(input)
-#define INPUT0_SIZE getLen(input0)
-#define INPUT1_SIZE getLen(input1)
-#define INPUT2_SIZE getLen(input2)
-#define EXPECT_SIZE getLen(expect)
-#define FOR_EACH(i) for (int i = 0; i < INPUT_SIZE; i++)
-
-static char msg[512];
+#define getLen(arr) (sizeof(arr) / sizeof(arr[0]))
 
 void setUp(void)
 {
@@ -21,19 +12,6 @@ void setUp(void)
 
 void tearDown(void)
 {
-}
-
-void test_makeSmallestPalindrome(void)
-{
-	char *input[] = {"egcfe", "abcd", "seven"};
-	char *expect[] = {"efcfe", "abba", "neven"};
-	char input_buf[256];
-
-	FOR_EACH (i) {
-		(void)sprintf(msg, "input %d\n", i);
-		strcpy(input_buf, input[i]);
-		TEST_ASSERT_EQUAL_STRING_MESSAGE(expect[i], makeSmallestPalindrome(input_buf), msg);
-	}
 }
 
 void test_findIntersectionValues(void)
@@ -53,8 +31,9 @@ void test_findIntersectionValues(void)
         };
 	int *expect[] = {expect0, expect1, expect2};
 	int *output, retSize;
+	char msg[512];
 
-	FOR_EACH (i) {
+	for (int i = 0; i < sizeof(input) / sizeof(input[0]); i++) {
 		(void)sprintf(msg, "input %d\n", i);
 		output = findIntersectionValues(input[i][0], inputSize[i][0], input[i][1], inputSize[i][1], &retSize);
 		TEST_ASSERT_EQUAL(2, retSize);
