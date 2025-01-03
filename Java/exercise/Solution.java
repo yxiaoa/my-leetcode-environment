@@ -3,6 +3,21 @@ package exercise;
 import java.util.*;
 
 public class Solution {
+	public int deleteGreatestValue(int[][] grid) {
+		for (int[] row : grid) {
+			Arrays.sort(row);
+		}
+		int sum = 0;
+		for (int j = 0; j < grid[0].length; j++) {
+			int max = 0;
+			for (int i = 0; i < grid.length; i++) {
+				max = Math.max(max, grid[i][j]);
+			}
+			sum += max;
+		}
+		return sum;
+	}
+
 	public double trimMean(int[] arr) {
 		int n = arr.length;
 		int sum = 0;
@@ -13,6 +28,7 @@ public class Solution {
 		}
 		return (double) sum / (n - 2 * k);
 	}
+
 	public String destCity(List<List<String>> paths) {
 		Set<String> set = new HashSet<>();
 		for (List<String> path : paths) {
@@ -25,6 +41,7 @@ public class Solution {
 		}
 		return "";
 	}
+
 	public int[] countPoints(int[][] points, int[][] queries) {
 		int[] res = new int[queries.length];
 		for (int i = 0; i < queries.length; i++) {

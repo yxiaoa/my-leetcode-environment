@@ -11,6 +11,16 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void testDeleteGreatestValue() {
+		int[][][] input0 = { { { 1, 2, 4 }, { 3, 3, 1 } }, { { 10 } } };
+		int[] expect = { 8, 10 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.deleteGreatestValue(input0[i]));
+		}
+	}
+
+	@Test
 	public void testTrimMean() {
 		int[][] input0 = { { 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 },
 				{ 6, 2, 7, 5, 1, 2, 0, 3, 10, 2, 5, 0, 5, 5, 0, 8, 7, 6, 8, 0 },
@@ -22,6 +32,7 @@ public class SolutionTest {
 			assertEquals(expect[i], sln.trimMean(input0[i]), 0.00001);
 		}
 	}
+
 	@Test
 	public void testDestCity() {
 		String[][][] input0 = { { { "London", "New York" }, { "New York", "Lima" }, { "Lima", "Sao Paulo" } },
