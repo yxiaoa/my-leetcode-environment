@@ -9,7 +9,7 @@
 -i.\src
 -i.\exercise
 -i.\lib\Service
--i.\lib\inc
+-i.\lib\include
 
 
 /****** Pre define  ******/
