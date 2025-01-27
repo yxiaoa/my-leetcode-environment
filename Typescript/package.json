@@ -9,5 +9,8 @@
 		"build": "tsc",
 		"test": "jest",
 		"test-c": "jest --coverage"
+	},
+	"dependencies": {
+		"npm": "^10.9.2"
 	}
 }
