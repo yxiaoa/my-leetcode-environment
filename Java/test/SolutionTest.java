@@ -10,6 +10,16 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void testsumOfTheDigitsOfHarshadNumber() {
+		int[] input0 = { 18, 23 };
+		int[] expect = { 9, -1 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.sumOfTheDigitsOfHarshadNumber(input0[i]));
+		}
+	}
+
+	@Test
 	public void teststableMountains() {
 		int[][] input0 = { { 1, 2, 3, 4, 5 }, { 10, 1, 10, 1, 10 }, { 10, 1, 10, 1, 10 } };
 		int[] input1 = { 2, 3, 10 };
