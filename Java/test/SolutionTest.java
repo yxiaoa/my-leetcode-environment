@@ -10,6 +10,17 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void testcountStudents() {
+		int[][] input0 = { { 1, 1, 0, 0 }, { 1, 1, 1, 0, 0, 1 } };
+		int[][] input1 = { { 0, 1, 0, 1 }, { 1, 0, 0, 0, 1, 1 } };
+		int[] expect = { 0, 3 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.countStudents(input0[i], input1[i]));
+		}
+	}
+
+	@Test
 	public void testsumOfTheDigitsOfHarshadNumber() {
 		int[] input0 = { 18, 23 };
 		int[] expect = { 9, -1 };
