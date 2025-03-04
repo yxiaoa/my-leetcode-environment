@@ -10,3 +10,7 @@
 #### Test
 
 1. py test_\<exercise\>.py
+
+#### Debug
+
+1. Run - Start Debugging - Python Debugger - Active file
