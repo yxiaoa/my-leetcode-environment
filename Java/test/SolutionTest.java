@@ -10,6 +10,16 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void testsubarraySum() {
+		int[][] input0 = { { 2, 3, 1 }, { 3, 1, 1, 2 } };
+		int[] expect = { 11, 13 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.subarraySum(input0[i]));
+		}
+	}
+
+	@Test
 	public void testcountStudents() {
 		int[][] input0 = { { 1, 1, 0, 0 }, { 1, 1, 1, 0, 0, 1 } };
 		int[][] input1 = { { 0, 1, 0, 1 }, { 1, 0, 0, 0, 1, 1 } };
