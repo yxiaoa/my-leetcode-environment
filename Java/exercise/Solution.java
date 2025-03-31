@@ -3,6 +3,18 @@ package exercise;
 import java.util.*;
 
 public class Solution {
+	public int numberOfPairs(int[] nums1, int[] nums2, int k) {
+		int cnt = 0;
+		for (int i = 0; i < nums1.length; i++) {
+			for (int j = 0; j < nums2.length; j++) {
+				if (nums1[i] % (k * nums2[j]) == 0) {
+					cnt++;
+				}
+			}
+		}
+		return cnt;
+	}
+
 	public int subarraySum(int[] nums) {
 		int[] prefix = new int[nums.length + 1];
 		for (int i = 0; i < nums.length; i++) {
@@ -10,8 +22,8 @@ public class Solution {
 		}
 		int sum = 0;
 		for (int i = 0; i < nums.length; i++) {
-			int start = Math.max(0, i-nums[i]);
-			sum += prefix[i+1] - prefix[start];
+			int start = Math.max(0, i - nums[i]);
+			sum += prefix[i + 1] - prefix[start];
 		}
 		return sum;
 	}
