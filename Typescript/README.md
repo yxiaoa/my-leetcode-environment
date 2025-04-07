@@ -15,7 +15,7 @@
 
 #### Debug
 
-1. Run and Debug choose Jest All configuration
+1. Run and Debug choose Jest All configuration or Jest Current File
 
 #### Unit test
 
