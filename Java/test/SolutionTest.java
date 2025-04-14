@@ -10,6 +10,17 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void testfinalPositionOfSnake() {
+		int[] input0 = { 2, 3 };
+		String[][] input1 = { { "RIGHT", "DOWN" }, { "DOWN", "RIGHT", "UP" } };
+		int[] expect = { 3, 1 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.finalPositionOfSnake(input0[i], Arrays.asList(input1[i])));
+		}
+	}
+
+	@Test
 	public void testnumberOfPairs() {
 		int[][] input0 = { { 1, 3, 4 }, { 1, 2, 4, 12 } };
 		int[][] input1 = { { 1, 3, 4 }, { 2, 4 } };

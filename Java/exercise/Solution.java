@@ -3,6 +3,27 @@ package exercise;
 import java.util.*;
 
 public class Solution {
+	public int finalPositionOfSnake(int n, List<String> commands) {
+		int pos = 0;
+		for (String command : commands) {
+			switch (command) {
+				case "UP":
+					pos -= n;
+					break;
+				case "DOWN":
+					pos += n;
+					break;
+				case "LEFT":
+					pos--;
+					break;
+				default:
+					pos++;
+					break;
+			}
+		}
+		return pos;
+	}
+
 	public int numberOfPairs(int[] nums1, int[] nums2, int k) {
 		int cnt = 0;
 		for (int i = 0; i < nums1.length; i++) {
