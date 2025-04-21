@@ -6,6 +6,10 @@
 
 1. npm install -g typescript
 
+Upgrade:
+1. Download and install node.js
+2. npm install -g npm@11.3.0
+
 #### Run
 
 1. tsc app.ts
