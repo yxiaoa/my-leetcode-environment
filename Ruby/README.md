@@ -25,5 +25,9 @@ TBD
 
 #### Format & Lint
 
-TBD
+1. Install vscode extension Rufo
+2. On windows - Edit extension setting
+   1. Rufo: Exe -> cmd
+   2. Rufo: Args ->  ["/c","rufo.bat"]
+3. Restart vscode, Rufo will auto-format when save file or use Format cmd/short-key
 
