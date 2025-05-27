@@ -3,13 +3,11 @@
 
 /****** Header file  ******/
 
+-i"C:\Users\yxiao\.gem\ruby\3.4.0\gems\ceedling-1.0.1\vendor\unity\src"
 -i"C:\msys64\mingw64\x86_64-w64-mingw32\include\"
--i"C:\msys64\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\"
--i"C:\Ruby27-x64\lib\ruby\gems\2.7.0\gems\ceedling-0.31.1\vendor\unity\src"
--i.\src
 -i.\exercise
--i.\lib\Service
 -i.\lib\include
+-i.\lib\service
 
 
 /****** Pre define  ******/

@@ -29,11 +29,11 @@
 			"findclosest.h": "c"
 		},
 		"c-cpp-flylint.includePaths": [
-			"C:\\Ruby27-x64\\lib\\ruby\\gems\\2.7.0\\gems\\ceedling-0.31.1\\vendor\\unity\\src",
+			"C:\\Users\\yxiao\\.gem\\ruby\\3.4.0\\gems\\ceedling-1.0.1\\vendor\\unity\\src",
 			"C:\\msys64\\mingw64\\x86_64-w64-mingw32\\include",
-			"${workspaceFolder}\\src",
-			"${workspaceFolder}\\lib\\Service",
-			"${workspaceFolder}\\lib\\include"
+			"${workspaceFolder}\\exercise",
+			"${workspaceFolder}\\lib\\include",
+			"${workspaceFolder}\\lib\\service"
 		]
 	}
 }
