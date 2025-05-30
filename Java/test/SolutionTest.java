@@ -10,6 +10,18 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void test_findClosest() {
+		int[] input0 = { 2, 2, 1 };
+		int[] input1 = { 7, 5, 5 };
+		int[] input2 = { 4, 6, 3 };
+		int[] expect = { 1, 2, 0 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.findClosest(input0[i], input1[i], input2[i]));
+		}
+	}
+
+	@Test
 	public void test_hasGroupsSizeX() {
 		int[][] input0 = { { 1, 2, 3, 4, 4, 3, 2, 1 }, { 1, 1, 1, 2, 2, 2, 3, 3 } };
 		boolean[] expect = { true, false };
