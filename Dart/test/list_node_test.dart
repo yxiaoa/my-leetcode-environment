@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import '../lib/ListNode.dart';
+import 'package:leetcode/ListNode.dart';
 
 void main() {
   group('ListNode', () {
