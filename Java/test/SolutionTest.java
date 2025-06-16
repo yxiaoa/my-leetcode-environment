@@ -279,4 +279,17 @@ public class SolutionTest {
 			assertEquals(expect[i], sln.maximumNumberOfStringPairs(input0[i]));
 		}
 	}
+
+	@Test
+	public void test_maxFreqSum() {
+		String[] input0 = {
+				"successes",
+				"aeiaeia"
+		};
+		int[] expect = { 6, 3 };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.maxFreqSum(input0[i]));
+		}
+	}
 }
