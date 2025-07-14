@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import '../lib/maxFreqSum.dart';
+import 'package:leetcode/maxFreqSum.dart';
 
 void main() {
   group('maxFreqSum', () {
