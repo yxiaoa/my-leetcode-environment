@@ -10,6 +10,16 @@ import exercise.Solution;
 
 public class SolutionTest {
 	@Test
+	public void test_convertDateToBinary() {
+		String[] input0 = { "2080-02-29", "1900-01-01" };
+		String[] expect = { "100000100000-10-11101", "11101101100-1-1" };
+		Solution sln = new Solution();
+		for (int i = 0; i < input0.length; i++) {
+			assertEquals(expect[i], sln.convertDateToBinary(input0[i]));
+		}
+	}
+
+	@Test
 	public void test_minCosts() {
 		int[][] input0 = { { 5, 3, 4, 1, 3, 2 }, { 1, 2, 4, 6, 7 } };
 		int[][] expect = { { 5, 3, 3, 1, 1, 1 }, { 1, 1, 1, 1, 1 } };
