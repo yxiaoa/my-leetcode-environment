@@ -101,3 +101,55 @@ int *postorderTraversal(struct TreeNode *root, int *returnSize)
 	*returnSize = ri;
 	return ret;
 }
+
+TreeNode_t *array_to_tree(int *arr, int size)
+{
+	if (size <= 0 || arr == NULL) {
+		return NULL;
+	}
+
+	TreeNode_t *root = (TreeNode_t *)malloc(sizeof(TreeNode_t));
+	if (root == NULL) {
+		return NULL; // Memory allocation failed
+	}
+
+	root->val = arr[0];
+	root->left = NULL;
+	root->right = NULL;
+
+	TreeNode_t **nodes = (TreeNode_t **)malloc(size * sizeof(TreeNode_t *));
+	if (nodes == NULL) {
+		free(root);
+		return NULL; // Memory allocation failed
+	}
+	nodes[0] = root;
+
+	for (int i = 1; i < size; i++) {
+		if (arr[i] != -1) { // Assuming -1 indicates a null node
+			TreeNode_t *node = (TreeNode_t *)malloc(sizeof(TreeNode_t));
+			if (node == NULL) {
+				for (int j = 0; j < i; j++) {
+					free(nodes[j]);
+				}
+				free(nodes);
+				return NULL; // Memory allocation failed
+			}
+			node->val = arr[i];
+			node->left = NULL;
+			node->right = NULL;
+			nodes[i] = node;
+
+			int parentIndex = (i - 1) / 2;
+			if (i % 2 == 1) { // Left child
+				nodes[parentIndex]->left = node;
+			} else { // Right child
+				nodes[parentIndex]->right = node;
+			}
+		} else {
+			nodes[i] = NULL; // Null node
+		}
+	}
+
+	free(nodes);
+	return root;
+}
