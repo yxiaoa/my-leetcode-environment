@@ -9,7 +9,7 @@ public class SolutionTest {
 		int[] input = { 1, 2, 3, 4, 10 };
 		boolean expect = false;
 		Solution sln = new Solution();
-		assertEquals(expect, sln.canAliceWin(input)); //TODO fix the warning
+		assertEquals(expect, sln.canAliceWin(input));
 	}
 
 	@Test
