@@ -1,5 +1,6 @@
 pub mod min_costs;
-pub mod solution;
+pub mod get_sneaky_numbers;
+pub mod base;
 
-// Re-export the main items from solution.rs
-pub use solution::{Solution, TreeNode};
+// Re-export the main items from base.rs
+pub use base::Solution;

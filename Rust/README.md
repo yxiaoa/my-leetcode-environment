@@ -23,7 +23,9 @@
 
 #### Unit test
 
-1. cargo test <test_name>
+1. Add <exercise>.rs in solution and test_<exercise>.rs in tests
+2. Add pub mod <exercise> in mod.rs
+3. cargo test --test test_<exercise>
 
 #### Format & Lint
 
