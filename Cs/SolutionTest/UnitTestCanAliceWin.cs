@@ -29,6 +29,5 @@ namespace SolutionTest
 			Solution.Solution sln = new();
 			Assert.AreEqual(expect, sln.CanAliceWin(input0));
 		}
-
 	}
 }
