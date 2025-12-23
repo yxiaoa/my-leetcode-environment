@@ -27,7 +27,9 @@
 			"countpoints.h": "c",
 			"uncommonfromsentences.h": "c",
 			"findclosest.h": "c",
-			"reversedegree.h": "c"
+			"reversedegree.h": "c",
+			"numarraysumrange.h": "c",
+			"minoperations.h": "c"
 		},
 		"c-cpp-flylint.includePaths": [
 			"C:\\Users\\yxiao\\.gem\\ruby\\3.4.0\\gems\\ceedling-1.0.1\\vendor\\unity\\src",
