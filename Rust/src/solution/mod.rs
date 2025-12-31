@@ -5,6 +5,7 @@ pub mod get_sneaky_numbers;
 pub mod is_balanced;
 pub mod min_costs;
 pub mod min_operations;
+pub mod recover_order;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
