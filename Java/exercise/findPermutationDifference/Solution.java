@@ -1,4 +1,6 @@
-class Solution {
+package exercise.findPermutationDifference;
+
+public class Solution {
 	public int findPermutationDifference(String s, String t) {
 		int sum = 0;
 		int map[] = new int[26];
