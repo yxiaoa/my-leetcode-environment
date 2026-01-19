@@ -7,6 +7,7 @@ pub mod min_costs;
 pub mod min_operations;
 pub mod recover_order;
 pub mod sum_range;
+pub mod final_position_of_snake;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
