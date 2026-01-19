@@ -8,6 +8,7 @@ pub mod min_operations;
 pub mod recover_order;
 pub mod sum_range;
 pub mod final_position_of_snake;
+pub mod find_poisoned_duration;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
