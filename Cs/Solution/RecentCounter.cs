@@ -1,0 +1,32 @@
+
+using System.Collections.Generic;
+
+namespace Solution
+{
+	public class RecentCounter
+	{
+
+		private readonly Queue<int> queue;
+
+		public RecentCounter()
+		{
+			queue = new Queue<int>();
+		}
+
+		public int Ping(int t)
+		{
+			queue.Enqueue(t);
+			while (queue.Peek() < (t - 3000))
+			{
+				queue.Dequeue();
+			}
+			return queue.Count;
+		}
+	}
+}
+
+/**
+ * Your RecentCounter object will be instantiated and called as such:
+ * RecentCounter obj = new RecentCounter();
+ * int param_1 = obj.Ping(t);
+ */
