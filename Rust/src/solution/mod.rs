@@ -13,7 +13,8 @@ pub mod can_alice_win;
 pub mod read_binary_watch;
 pub mod reverse_degree;
 pub mod maximum_units;
-pub mod MyQueue;
+pub mod my_queue;
+pub mod distance_between_bus_stops;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
