@@ -9,7 +9,7 @@ void main() {
 
     var sln = MyQueue();
     for (int i = 0; i < input0.length; i++) {
-      var output;
+      Object? output;
       switch (input0[i]) {
         case "MyQueue":
           sln = MyQueue();
