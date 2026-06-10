@@ -17,6 +17,7 @@ pub mod my_queue;
 pub mod distance_between_bus_stops;
 pub mod add_to_array_form;
 pub mod most_frequent_even;
+pub mod find_relative_ranks;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
