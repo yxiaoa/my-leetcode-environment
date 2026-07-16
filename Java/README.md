@@ -36,6 +36,9 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 4. Right click on a method or a class - Source Action - Generate test
     - if lib not found，try restart vscode
 5. Testing manages all tests and summary, but test can be run in test class
+6. Assert
+    - assertArrayEquals
+    - assertEquals
 
 #### Format & Lint
 
