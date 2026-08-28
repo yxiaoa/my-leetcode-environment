@@ -20,6 +20,7 @@ pub mod most_frequent_even;
 pub mod find_relative_ranks;
 pub mod max_sum_div_three;
 pub mod max_ascending_sum;
+pub mod minimum_operations;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
