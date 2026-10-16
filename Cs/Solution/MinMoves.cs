@@ -1,14 +1,12 @@
+using System.Linq;
+
 namespace Solution
 {
     public partial class Solution
     {
         public int MinMoves(int[] nums)
         {
-            int max = 0;
-	    foreach (var num in nums)
-	    {
-	        if (num > max) max = num;
-	    }
+            int max = nums.Max();
             int sum = 0;
 	    foreach (var num in nums)
 	    {
