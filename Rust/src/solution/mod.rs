@@ -22,6 +22,7 @@ pub mod max_sum_div_three;
 pub mod max_ascending_sum;
 pub mod minimum_operations;
 pub mod elevator_requests;
+pub mod count_points;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
