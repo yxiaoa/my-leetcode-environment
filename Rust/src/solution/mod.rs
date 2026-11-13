@@ -23,6 +23,7 @@ pub mod max_ascending_sum;
 pub mod minimum_operations;
 pub mod elevator_requests;
 pub mod count_points;
+pub mod minimum_chairs;
 
 // Re-export the main items from base.rs
 pub use base::Solution;
